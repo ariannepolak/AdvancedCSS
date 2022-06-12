@@ -1,0 +1,262 @@
+@import url(variables.scss);
+
+html {
+  background: $lightgrey;
+  font-family: $font;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+
+/**************** PART1 ****************/
+header {
+  width: 400px;
+  border-radius: 20px;
+  box-shadow: 2px 5px 10px $shadow;
+  margin: 10px;
+}
+.cardheader {
+  background-color: $white;
+  color: rgb(96, 96, 96);
+  font-size: $fontsizecard;
+  padding: 30px;
+  border-radius: 15px 15px 0 0;
+  height: 250px;
+}
+.img {
+  display: flex;
+  justify-content: center;
+}
+img {
+  border: 5px solid $white;
+  border-radius: 50%;
+}
+.cardfooter {
+  background-color: $purple;
+  text-align: center;
+  border-radius: 0 0 15px 15px;
+  height: 130px;
+  padding-top: 50px;
+  line-height: 0.5;
+}
+.name {
+  color: $white;
+  font-size: $fontsizename;
+}
+.link {
+  color: $lightpurple;
+  font-size: $fontsizelink;
+}
+
+
+/**************** PART2 ****************/
+.photogrid {
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+  grid-template-columns: auto auto auto;
+}
+.container {
+  position: relative;
+  width: 50%;
+}
+.image {
+  display: block;
+  height: $imageheigth;
+  width: $imagewidth;
+  border: none;
+  border-radius: 5px;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: $imageheigth;
+  width: $imagewidth;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgb(37, 37, 69);
+}
+.container:hover .overlay {
+  opacity: 1;
+}
+.button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+/**************** PART3 ****************/
+footer {
+  display: grid;
+  justify-items: end;
+}
+a {
+  color: $white;
+}
+.button:hover {
+  width: $iconhoverwidth;  
+}
+.icon i {
+  font-size: $fontsizeicon;
+  line-height: $iconheight;
+  color: $white;
+}
+span {
+  font-size: $fontsizeiconlink;
+  font-weight: 500;
+  line-height: $iconheight;
+  margin-left: 10px;
+  color: $white;
+}
+/* BLOG */
+.iconblog {
+  display: inline-block;
+  text-align: center;
+  height: $iconheight;
+  width: $iconwidth;
+  box-sizing: border-box;
+  line-height: $iconheight;
+  font-size: $fontsizeicon;
+  color: $white;
+  background-color: $blogcolor;
+}
+.buttonblog {
+  display: inline-block;
+  height: $iconheight;
+  width: $iconwidth;
+  overflow: hidden;
+  background-color: $blogcolor;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.buttonblog:hover {
+  width: $iconhoverwidth;  
+}
+/* TWITTER */
+.icontwitter {
+  display: inline-block;
+  text-align: center;
+  height: $iconheight;
+  width: $iconwidth;
+  box-sizing: border-box;
+  line-height: $iconheight;
+  font-size: $fontsizeicon;
+  color: $white;
+  background-color: $twittercolor;
+}
+.buttontwitter {
+  display: inline-block;
+  height: $iconheight;
+  width: $iconwidth;
+  overflow: hidden;
+  background-color: $twittercolor;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.buttontwitter:hover {
+  width: $iconhoverwidth;  
+}
+/* LINKEDIN */
+.iconlinkedin {
+  display: inline-block;
+  text-align: center;
+  height: $iconheight;
+  width: $iconwidth;
+  box-sizing: border-box;
+  line-height: $iconheight;
+  font-size: $fontsizeicon;
+  color: $white;
+  background-color: $linkedincolor;
+}
+.buttonlinkedin {
+  display: inline-block;
+  height: $iconheight;
+  width: $iconwidth;
+  overflow: hidden;
+  background-color: $linkedincolor;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.buttonlinkedin:hover {
+  width: $iconhoverwidth;  
+}
+/* FACEBOOK */
+.iconfacebook {
+  display: inline-block;
+  text-align: center;
+  height: $iconheight;
+  width: $iconwidth;
+  box-sizing: border-box;
+  line-height: $iconheight;
+  font-size: $fontsizeicon;
+  color: $white;
+  background-color: $facebookcolor;
+}
+.buttonfacebook{
+  display: inline-block;
+  height: $iconheight;
+  width: $iconwidth;
+  overflow: hidden;
+  background-color: $facebookcolor;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.buttonfacebook:hover {
+  width: $iconhoverwidth;  
+}
+/* GITHUB */
+.icongithub {
+  display: inline-block;
+  text-align: center;
+  height: $iconheight;
+  width: $iconwidth;
+  box-sizing: border-box;
+  line-height: $iconheight;
+  font-size: $fontsizeicon;
+  color: $white;
+  background-color: $githubcolor;
+}
+.buttongithub {
+  display: inline-block;
+  height: $iconheight;
+  width: $iconwidth;
+  overflow: hidden;
+  background-color: $githubcolor;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.buttongithub:hover {
+  width: $iconhoverwidth;  
+}
+
+
+
+@media screen and (max-width: 800px) {
+  .photogrid {
+    display: grid;
+    gap: 20px;
+    justify-content: center;  
+    grid-template-columns: auto auto;
+  }  
+}
+
+@media screen and (max-width: 500px) {
+  .photogrid {
+    display: grid;
+    gap: 20px;
+    justify-content: center;  
+    grid-template-columns: auto;
+  }  
+}
